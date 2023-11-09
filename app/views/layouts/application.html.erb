@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Rabbit</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+<head>
+    <title><%= yield(:title) %> rabbit</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <%= yield %>
-    </main>
-  </body>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+</head>
+
+<body>
+
+  <main class=" bg-blue-100 dark:bg-gray-900 ">
+    <%= render "shared/navbar" %>
+    <section class=" h-screen">
+      <div class="max-w-screen-xl px-4 mx-auto lg:px-12 w-full">
+        <%= yield %>
+      </div>
+    </section>
+  </main>
+
+</body>
+
 </html>
