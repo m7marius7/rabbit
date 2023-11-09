@@ -21,6 +21,7 @@
         </p>
         <%#= render 'form' %>
         <div class="flex justify-center items-center space-x-5">
+             <%= link_to "Task completat", @task.url, class: "focus:outline-none text-white bg-orange-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900" %>
             <%= link_to "Edit", edit_task_path(@task), class: "focus:outline-none text-white bg-green-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900" %>
             <%= link_to "Sterge", task_path(@task), data: {
                     turbo_method: :delete,

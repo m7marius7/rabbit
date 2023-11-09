@@ -1,9 +1,7 @@
 <% provide(:title, 'home')%>
 
 <h1 class="">aici e "index" din tasks folder</h1>
- <div class="m-10">
-        <%= link_to "new Task", new_task_path,  class: "focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900" %>
-    </div>
+
 <div class="border p-5 space-y-2 bg-white text-cente1r">
     <div class="grid grid-cols-3 gap-6 p-10">
         <% @tasks.each do |task| %>
