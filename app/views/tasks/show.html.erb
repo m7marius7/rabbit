@@ -1,5 +1,5 @@
 <% provide(:title, 'lista task')%>
-<h1 class="">aici e show din tasks folder</h1>
+<h1 class="">aici e "show" din tasks folder</h1>
 
 <section class="bg-white dark:bg-gray-900">
     <div class="m-5">
@@ -13,10 +13,10 @@
     </div>
     <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-sm">
         <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
-            <%= @task.title %>
+            <%= @task.title.capitalize %>
         </h2>
         <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
-            <%= @task.description %></p>
+            <%= @task.description.capitalize %></p>
         <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl"><%= @task.company %>
         </p>
         <%#= render 'form' %>
