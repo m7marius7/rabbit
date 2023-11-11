@@ -2,7 +2,14 @@
 <html>
 
 <head>
-    <title><%= yield(:title) %> rabbit</title>
+    <!--<title><%= yield(:title) %> rabbit</title> -->
+     <title><%= @meta_title %></title>
+     <meta name="description" content="<%= @meta_description %>">
+    <!-- Optional robot instructions can be set up in controllers -->
+      <% if @meta_robots_instructions %>
+        <meta name="robots" content="<%= @meta_robots_instructions %>">
+      <% end %>
+
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>

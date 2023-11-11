@@ -1,0 +1,22 @@
+   <%= turbo_frame_tag task do %>
+    <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-sm">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
+            <%= @task.title.capitalize %>
+        </h2>
+        <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
+            <%= @task.description.capitalize %></p>
+        <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl"><%= @task.company %>
+        </p>
+        <%#= render 'form' %>
+        <div class="flex justify-center items-center space-x-5">
+             <%= link_to "Task completat", @task.url, class: "focus:outline-none text-white bg-orange-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900" %>
+            <%= link_to "Edit", edit_task_path(@task), class: "focus:outline-none text-white bg-green-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900" %>
+            <%= link_to "Sterge", task_path(@task), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  }, class: "focus:outline-none text-white bg-red-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900" %>
+
+        </div>
+
+    </div>
+     <% end %>
